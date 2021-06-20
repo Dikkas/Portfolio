@@ -1,0 +1,164 @@
+:root{
+    --clr-primary: #e3874f;
+    --clr-secondary: #37363d;
+    --clr-third: #886a4a;
+
+    --fclr-primary: #707070;
+
+    font-size: 16px;
+}
+
+
+body, 
+h1,
+h2,
+h3,
+h4,
+p{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Roboto', sans-serif;;
+}
+
+#navbar{
+    background-color: var(--clr-primary);
+    color: var(--fclr-primary);
+
+    display: flex;
+    justify-content: flex-end;
+
+    position: fixed;
+    width: 100%;
+}
+
+#navbar > a{
+    height: 100%;
+    background-color: var(--clr-primary);
+    padding: 20px 30px;
+
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#navbar > a:hover{
+    background-color: var(--clr-third);
+}
+
+#welcome-section, #contact{
+    background-color: var(--clr-secondary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome-section > h1{
+    font-size: 4rem;
+    color:white;
+}
+
+#welcome-section > p{
+    color: var(--clr-primary);
+    font-size: 1.75rem;
+    font-style: italic;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--clr-third);
+
+    padding: 40px 30px;
+}
+
+#projects > h3{
+    font-size: 3rem;
+    text-shadow: 2px 2px 7px rgb(173, 173, 173);
+    margin: 30px 0px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+
+
+}
+
+.project-tile{
+    background-color: var(--clr-secondary);
+    box-shadow: 0px 0px 20px rgb(32, 31, 31);
+
+    text-decoration: none;
+    color: white;
+}
+
+div > img{
+    width: 100%;
+    height: 90%;
+}
+
+.text{
+    padding: 15px;
+    font-size: 25px;
+}
+.vis{
+    visibility: hidden;
+    color: var(--clr-primary);
+}
+
+.project-tile:hover .vis{
+    visibility: visible;
+}
+
+
+#contact{
+    gap: 30px;
+}
+.contact-h3{
+    font-size: 4rem;
+    color:white;
+}
+
+.contact-p{
+    color: var(--clr-primary);
+    font-size: 1.75rem;
+    font-style: italic;
+}
+
+#profile-link{
+    color: white;
+    margin: 30px auto;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+#profile-link:hover{
+    color: var(--clr-third);
+    transition-duration: 1s;
+}
+
+footer{
+    background-color: var(--clr-secondary);
+    padding: 2rem;
+    font-size: 1.25rem;
+    text-align: right;
+    color: var(--clr-primary);
+    border-top:3px solid var(--clr-primary);
+}
+
+
+@media screen and (max-width: 800px) {
+    :root{
+        font-size: 14px;
+    }
+    
+}
